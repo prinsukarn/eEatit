@@ -1,0 +1,60 @@
+﻿body {
+    background-color: aliceblue;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+.col-3 i {
+    margin: 2px;
+}
+
+#LinkButton6:hover {
+    color: white;
+}
+
+#LinkButton13:hover {
+    color: silver;
+}
+
+#LinkButton14:hover {
+    color: silver;
+}
+
+#LinkButton15:hover {
+    color: silver;
+}
+
+#LinkButton8:hover {
+    color: silver;
+}
+
+#LinkButton9:hover {
+    color: silver;
+}
+
+#LinkButton10:hover {
+    color: silver;
+}
+
+#LinkButton11:hover {
+    color: silver;
+}
+
+#LinkButton12:hover {
+    color: red;
+}
+
+.contact a {
+    text-decoration: none;
+    font-size: 13px;
+    color: black;
+    margin: 2px;
+    padding: 2px;
+}
+
+    .contact a:hover {
+        color: blue;
+    }
+
+    .design a{
+        color:red;
+    }

@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="EatiT.com.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <title>EaTiT</title>
+        <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="Fontawesome/css/all.css" rel="stylesheet" />
+        <link href="Datatable/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link href="StyleSheet1.css" rel="stylesheet" />
+       
+        <script src="Bootstrap/js/bootstrap.min.js"></script>
+        <script src="Bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+        <script src="Bootstrap/js/popper.min.js"></script>
+        <script src="Datatable/js/jquery.dataTables.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+               <div class="row contact" style="background-color:whitesmoke;">
+                   <div class="col-12 text-right">
+                               <a href="tel:9842060666" target="_blank" class="btn btn-link"><i class="fas fa-phone" style="margin:5px"></i>9842060666</a>
+                 <a href="mailto:info.eatit07@email.com" target="_blank" class="btn btn-link">
+                     <i class="far fa-envelope" style="margin:5px"></i>EaTiT@gmail.com</a>
+                   </div>
+                   </div>
+               
+         </div>
+      <nav class="navbar navbar-expand-lg navbar-light  p-0" style="background-color:#CB202D;">
+              <a class="navbar-brand ml-4" href="Homepage.aspx"> <img src="imgs/FINALEAiIT.png" width="50" height="50" />
+               <b style="font-family:open-sans-regular;font-size:25px;color:white">EaTiT</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+          <!--<div class="col-8 mx-auto text-center pt-lg-3 ml-lg-5">
+                <div class="input-group mb-3">
+  <input type="text" id="Text1"  class="form-control" placeholder="Explore Restaurants & Menus" aria-label="Recipient's username" aria-describedby="basic-addon2" style="background-color:white">
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2" style="background-color:forestgreen;color:white;">Search</span>
+  </div>
+</div>
+               </div>-->
+          <!--Search Button functionality-->
+        
+           <div class="col-7 mx-auto text-center pt-lg-3 ml-lg-5">
+                <div class="input-group mb-3">                  
+                    <asp:TextBox ID="TextBox1" class="form-control" style="box-sizing:border-box;" placeholder="Explore Restaurants & Menus" runat="server" ></asp:TextBox>
+  <div class="input-group-append">
+    <asp:LinkButton ID="LinkButton16" Class="btn  btn-success" runat="server" ForeColor="White" OnClick="LinkButton16_Click"><i class="fa fa-search" aria-hidden="true"></i></asp:LinkButton>
+           
+  </div>
+</div>
+               </div>
+
+  <div class="collapse navbar-collapse COL-MD-4" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+              <!-- Example single danger button -->
+      <div class="btn-group ">
+  <button type="button" class="btn btn-danger dropdown-toggle" style="background-color:#CB202D;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Products
+  </button>
+  <div class="dropdown-menu" style="background-color:#CB202D;">
+    <asp:LinkButton class="nav-link dropdown-item" ID="LinkButton8" runat="server" onClick="LinkButton8_Click" style="color:white;">Food</asp:LinkButton>
+       <asp:LinkButton class="nav-link dropdown-item" ID="LinkButton19" runat="server" onClick="LinkButton19_Click" style="color:white;">Bakery</asp:LinkButton>
+      <asp:LinkButton class="nav-link dropdown-item" ID="LinkButton22" runat="server" onClick="LinkButton22_Click" style="color:white;">Liquors</asp:LinkButton>
+             
+        <div class="dropdown-divider" style="border:0.5px solid white;"></div>        
+              <asp:LinkButton class="nav-link dropdown-item" ID="LinkButton18" runat="server" onClick="LinkButton18_Click" style="color:white;">Dairy</asp:LinkButton>
+              <asp:LinkButton class="nav-link dropdown-item" ID="LinkButton17" runat="server" onClick="LinkButton17_Click" style="color:white;">Grocery</asp:LinkButton>
+             <asp:LinkButton class="nav-link dropdown-item" ID="LinkButton20" runat="server" onClick="LinkButton20_Click" style="color:white;">Meat & Fish Fresh House</asp:LinkButton>
+  <div class="dropdown-divider" style="border:0.5px solid white;"></div>  
+        <asp:LinkButton class="nav-link dropdown-item" ID="LinkButton23" runat="server" onClick="LinkButton23_Click" style="color:white;">Kirana Items</asp:LinkButton>
+   
+    <div class="dropdown-divider" style="border:0.5px solid white;"></div>
+        <asp:LinkButton class="nav-link dropdown-item" ID="LinkButton21" runat="server" onClick="LinkButton21_Click" style="color:white;">Medicine</asp:LinkButton>
+   
+  </div>
+</div>
+                   
+              
+                 </li>
+                <li class="nav-item active">
+                <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" onClick="LinkButton4_Click" style="color:white;background-color:#CB202D;box-shadow:1;">Login/Create Account</asp:LinkButton>
+                </li>
+               <li class="nav-item ">
+                    <asp:LinkButton class="nav-link" ID="LinkButton1"  runat="server" style="color:white;" onClick="LinkButton1_Click"><i class="fas fa-user"></i></asp:LinkButton>
+                </li>
+                <li class="nav-item">
+                      <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" style="color:white;" OnClick="LinkButton2_Click"><i class="fas fa-bell"></i></asp:LinkButton>
+                </li>
+                <li class="nav-item">
+                      <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" style="color:white;" OnClick="LinkButton3_Click"><i class="fas fa-cart-plus"></i></asp:LinkButton>
+                </li>
+                <li class="nav-item">
+                      <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" style="color:white;" OnClick="LinkButton7_Click" >Logout</asp:LinkButton>
+                </li>
+            </ul>
+  </div>
+          </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+         <div class="container-fluid mx-auto footer" style="background-color:#33373D;color:white;font-family:sans-serif;">
+            <div class="col-10 mx-auto">
+              <div class="row" >
+                 <div class="col-md-3 p-md-2">
+                     <div class="row">OUR COMPANY</div>
+                     <div class="row">
+                         <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" ForeColor="white">About Us</asp:LinkButton></div>
+                     <div class="row"><asp:LinkButton ID="LinkButton14" runat="server" OnClick="LinkButton14_Click" ForeColor="white" >Careers</asp:LinkButton></div>
+                     <div class="row">
+                         <asp:LinkButton ID="LinkButton15" runat="server" OnClick="LinkButton15_Click" ForeColor="white" >FAQs</asp:LinkButton></div>
+                 </div>
+                 <div class="col-md-3 p-md-2">
+                     <div class="row">
+                         <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click" ForeColor="white">CONTACT US</asp:LinkButton></div>
+                     <div class="row">
+                         <asp:LinkButton ID="LinkButton10" runat="server" OnClick="LinkButton10_Click" ForeColor="white">Help & Support</asp:LinkButton></div>
+                     <div class="row">
+                         <asp:LinkButton ID="LinkButton11" runat="server" OnClick="LinkButton11_Click" ForeColor="white" >Become Our Restaurant Partner</asp:LinkButton></div>
+                 </div>
+                 <div class="col-md-3 p-md-2">
+                     <div class="row">
+                         LEGAL</div>
+                     <div class="row">
+                         <asp:LinkButton ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" ForeColor="white" >Terms & Conditions</asp:LinkButton></div>
+                     <div class="row">
+                         <asp:LinkButton ID="LinkButton13" runat="server" OnClick="LinkButton13_Click" ForeColor="white">Privacy Policy</asp:LinkButton></div>
+                 </div>
+                 <div class="col-md-3 p-md-2">
+                     <div class="row">Connect With Us</div>
+                     <div class="row">
+                     <a href="#" style="color:silver;"><i class="fab fa-facebook-square"></i></a>
+                     <a href="#" style="color:silver;"><i class="fab fa-instagram-square"></i></a>
+                     <a href="#" style="color:silver;"><i class="fab fa-google-plus-square"></i></a></div>
+                 
+                   
+                  <div class="row">
+                      <asp:LinkButton ID="LinkButton5" runat="server" ForeColor="white" OnClick="LinkButton5_Click">News And Events</asp:LinkButton>
+                  </div>
+                      </div>
+                  
+                  </div>
+                  </div>
+       
+        </div>
+         <div class="container-fluid">
+           <div class="row contact" style="background-color:aliceblue;">
+              <div class="col-12 text-right design">
+                  <a href="http://www.mbitnepal.com/">Designed By:MB IT Solutions</a>             
+              </div>
+           </div>
+        </div>
+    </form>
+</body>
+</html>
